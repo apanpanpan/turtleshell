@@ -2,45 +2,48 @@
   <div class="dropdown">
     <button class="dropbtn">Building</button>
     <div class="dropdown-content">
-      <a href="javascript:param('building', 'l', {{#if vals.l}}3{{else}}2{{/if}});">Landmark</a>
-      <a href="javascript:param('building', 'c', {{#if vals.c}}3{{else}}2{{/if}});">South Campus Commons</a>
-      <a href="javascript:param('building', 't', {{#if vals.t}}3{{else}}2{{/if}});">Terrapin Row</a>
-      <a href="javascript:param('building', 'y', {{#if vals.y}}3{{else}}2{{/if}});">Varsity</a>
-      <a href="javascript:param('building', 'w', {{#if vals.w}}3{{else}}2{{/if}});">View</a>
-      <a href="javascript:param('building', 'o', {{#if vals.o}}3{{else}}2{{/if}});">Off Campus Housing</a>
+      <a style="text-decoration: none; {{#if vals.l}} background-color:#b3b3b3{{/if}}"href="javascript:param('building', 'l', {{#if vals.l}}3{{else}}2{{/if}});">Landmark{{#if vals.l}} ✓{{/if}}</a>
+      <a style="text-decoration: none; {{#if vals.c}} background-color:#b3b3b3{{/if}}"href="javascript:param('building', 'c', {{#if vals.c}}3{{else}}2{{/if}});">South Campus Commons{{#if vals.c}} ✓{{/if}}</a>
+      <a style="text-decoration: none; {{#if vals.t}} background-color:#b3b3b3{{/if}}"href="javascript:param('building', 't', {{#if vals.t}}3{{else}}2{{/if}});">Terrapin Row{{#if vals.t}} ✓{{/if}}</a>
+      <a style="text-decoration: none; {{#if vals.y}} background-color:#b3b3b3{{/if}}"href="javascript:param('building', 'y', {{#if vals.y}}3{{else}}2{{/if}});">Varsity{{#if vals.y}} ✓{{/if}}</a>
+      <a style="text-decoration: none; {{#if vals.w}} background-color:#b3b3b3{{/if}}"href="javascript:param('building', 'w', {{#if vals.w}}3{{else}}2{{/if}});">View{{#if vals.w}} ✓{{/if}}</a>
+      <a style="text-decoration: none; {{#if vals.o}} background-color:#b3b3b3{{/if}}"href="javascript:param('building', 'o', {{#if vals.o}}3{{else}}2{{/if}});">Off Campus Housing{{#if vals.o}} ✓{{/if}}</a>
     </div>
   </div>
   &nbsp; &nbsp;
   <div class="dropdown">
     <button class="dropbtn">Gender</button>
     <div class="dropdown-content">
-      <a href="javascript:param('gender', 'm', {{#if vals.m}}4{{else}}1{{/if}});">Male</a>
-      <a href="javascript:param('gender', 'f', {{#if vals.fem}}4{{else}}1{{/if}});">Female</a>
-      <a href="javascript:param('gender', 'f', 4);">Mixed</a>
+      <a style="text-decoration: none; {{#if vals.m}} background-color:#b3b3b3{{/if}}"href="javascript:param('gender', 'm', {{#if vals.m}}4{{else}}1{{/if}});">Male</a>
+      <a style="text-decoration: none; {{#if vals.fem}} background-color:#b3b3b3{{/if}}"href="javascript:param('gender', 'f', {{#if vals.fem}}4{{else}}1{{/if}});">Female</a>
+      <a style="text-decoration: none;"href="javascript:param('gender', 'f', 4);">Mixed</a>
     </div>
   </div>
   &nbsp; &nbsp;
   <div class="dropdown">
     <button class="dropbtn">Semester</button>
     <div class="dropdown-content">
-      <a href="javascript:param('semester', 'f', {{#if vals.f}}3{{else}}2{{/if}});">Fall</a>
-      <a href="javascript:param('semester', 'w', {{#if vals.wint}}3{{else}}2{{/if}});">Winter</a>
-      <a href="javascript:param('semester', 'p', {{#if vals.p}}3{{else}}2{{/if}});">Spring</a>
-      <a href="javascript:param('semester', 's', {{#if vals.s}}3{{else}}2{{/if}});">Summer</a>
+      <a style="text-decoration: none; {{#if vals.f}} background-color:#b3b3b3{{/if}}" href="javascript:param('semester', 'f', {{#if vals.f}}3{{else}}2{{/if}});">Fall{{#if vals.f}} ✓{{/if}}</a>
+      <a style="text-decoration: none; {{#if vals.wint}} background-color:#b3b3b3{{/if}}"href="javascript:param('semester', 'w', {{#if vals.wint}}3{{else}}2{{/if}});">Winter{{#if vals.wint}} ✓{{/if}}</a>
+      <a style="text-decoration: none; {{#if vals.p}} background-color:#b3b3b3{{/if}}"href="javascript:param('semester', 'p', {{#if vals.p}}3{{else}}2{{/if}});">Spring{{#if vals.p}} ✓{{/if}}</a>
+      <a style="text-decoration: none; {{#if vals.s}} background-color:#b3b3b3{{/if}}"href="javascript:param('semester', 's', {{#if vals.s}}3{{else}}2{{/if}});">Summer{{#if vals.s}} ✓{{/if}}</a>
     </div>
   </div>
   &nbsp; &nbsp;
   <div class="dropdown">
     <button class="dropbtn">Group Size</button>
     <div class="dropdown-content">
-      <a href="javascript:param('group', '1', {{#if vals.one}}4{{else}}1{{/if}})">1</a>
-      <a href="javascript:param('group', '2', {{#if vals.two}}4{{else}}1{{/if}})">2</a>
-      <a href="javascript:param('group', '3', {{#if vals.three}}4{{else}}1{{/if}})">3</a>
-      <a href="javascript:param('group', '4', {{#if vals.four}}4{{else}}1{{/if}})">4+</a>
+      <a style="text-decoration: none; {{#if vals.one}} background-color:#b3b3b3{{/if}}"href="javascript:param('group', '1', {{#if vals.one}}4{{else}}1{{/if}})">1</a>
+      <a style="text-decoration: none; {{#if vals.two}} background-color:#b3b3b3{{/if}}"href="javascript:param('group', '2', {{#if vals.two}}4{{else}}1{{/if}})">2</a>
+      <a style="text-decoration: none; {{#if vals.three}} background-color:#b3b3b3{{/if}}"href="javascript:param('group', '3', {{#if vals.three}}4{{else}}1{{/if}})">3</a>
+      <a style="text-decoration: none; {{#if vals.four}} background-color:#b3b3b3{{/if}}"href="javascript:param('group', '4', {{#if vals.four}}4{{else}}1{{/if}})">4+</a>
     </div>
   </div>
 </div>
 <article>
+  {{#if none}}
+  <h3>Sorry, no matches found.</h3>
+  {{else}}
 <div class="main">
     <div class="split left">
       <img src={{builds.roomUrl}} width = 350px height = 230px>
@@ -63,5 +66,6 @@
       <input type="image" src="https://i.imgur.com/7Xp7K8l.png" height=70px width=70px/>
     </div>
 </div>
+{{/if}}
 </article>
 </html>

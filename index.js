@@ -62,6 +62,24 @@ app.get('/sublease', function (req, res){
 	}
 
   var curr = result[0];
+  var vals = {
+      l: req.query.building != undefined && req.query.building.search('l') != -1,
+      c: req.query.building != undefined && req.query.building.search('c') != -1,
+      t: req.query.building != undefined && req.query.building.search('t') != -1,
+      y: req.query.building != undefined && req.query.building.search('y') != -1,
+      w: req.query.building != undefined && req.query.building.search('w') != -1,
+      o: req.query.building != undefined && req.query.building.search('o') != -1,
+      m: req.query.gender != undefined && req.query.gender.search('m') != -1,
+      fem:req.query.gender != undefined &&  req.query.gender.search('f') != -1,
+      f: req.query.semester != undefined && req.query.semester.search('f') != -1,
+      s: req.query.semester != undefined && req.query.semester.search('s') != -1,
+      p: req.query.semester != undefined && req.query.semester.search('p') != -1,
+      wint:req.query.semester != undefined && req.query.semester.search('w') != -1,
+      one: req.query.group != undefined && req.query.group.search('1') != -1,
+      two: req.query.group != undefined && req.query.group.search('2') != -1,
+      three: req.query.group != undefined && req.query.group.search('3') != -1,
+      four: req.query.group != undefined && req.query.group.search('4') != -1
+  }
   if (curr) {
     info = "<div class=\"Roominfo\">"
     for (var i of curr.roomInfo) {
@@ -70,30 +88,12 @@ app.get('/sublease', function (req, res){
     info += "</div>"
 
     var url = req.protocol + '://' + req.get('host') + req.originalUrl
-    var vals = {
-        l: req.query.building != undefined && req.query.building.search('l') != -1,
-        c: if (req.query.building) {req.query.building.search('c') != -1} else {false},
-        t: if (req.query.building) {req.query.building.search('t') != -1} else {false},
-        y: if (req.query.building) {req.query.building.search('y') != -1} else {false},
-        w: if (req.query.building) {req.query.building.search('w') != -1} else {false},
-        o: if (req.query.building) {req.query.building.search('o') != -1} else {false},
-        m: if (req.query.gender) {req.query.gender.search('m') != -1} else {false},
-        fem:if (req.query.gender) { req.query.gender.search('f') != -1} else {false},
-        f: if (req.query.semester) {req.query.semester.search('f') != -1} else {false},
-        s: if (req.query.semester) {req.query.semester.search('s') != -1} else {false},
-        p: if (req.query.semester) {req.query.semester.search('p') != -1} else {false},
-        wint: if (req.query.semester) {req.query.semester.search('w') != -1} else {false},
-        one: if (req.query.group) {req.query.group.search('1') != -1} else {false},
-        two: if (req.query.group) {req.query.group.search('1') != -1} else {false},
-        three: if (req.query.group) {req.query.group.search('1') != -1} else {false},
-        four: if (req.query.group) {req.query.group.search('1') != -1} else {false}
-    }
     var builds = {building: curr.buildingFull, roomBio: curr.roomBio, roomInfo: info, url:
     curr.pic, roomUrl: curr.roomPic, bio: curr.bio}
 
-    res.render('home', {builds: builds, vals: vals});
+    res.render('home', {builds: builds, vals: vals, none: false});
   } else {
-    res.render('error');
+    res.render('home', {builds: builds, vals: vals, none: true});
   }
 
 })

@@ -178,7 +178,11 @@
         }
         /* removing param */
         if (option == 3) {
-          params[name].replace(encodeURIComponent(value),"");
+          if (params[name] == encodeURIComponent(value)) {
+            delete params[name]
+          } else {
+          params[name] = params[name].replace(encodeURIComponent(value),"");
+        }
         }
         if (option == 4) {
           delete params[name];
