@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  </head>
+
+  <div class="topnav">
+  <a href="#home">Profile</a>
+  <a href="#news">Messages</a>
+  <a href="#contact">Roommate Match</a>
+  <a href="#about">Sublease Match</a>
+  <a href="/" id="logo"><img src="https://cdn2.iconfinder.com/data/icons/files-and-folders-vol-4/64/mario-turtle-512.png" width=40px> Turtleshell</a>
+</div>
+<div class="filters">
+  <div class="dropdown">
+    <button class="dropbtn">Building</button>
+    <div class="dropdown-content">
+      <a href="#">Landmark</a>
+      <a href="#">South Campus Commons</a>
+      <a href="#">Terrapin Row</a>
+      <a href="#">Varsity</a>
+      <a href="#">View</a>
+      <a href="#">Off Campus Housing</a>
+    </div>
+  </div>
+  &nbsp; &nbsp;
+  <div class="dropdown">
+    <button class="dropbtn">Gender</button>
+    <div class="dropdown-content">
+      <a href="#">Male</a>
+      <a href="#">Female</a>
+      <a href="#">Mixed</a>
+    </div>
+  </div>
+  &nbsp; &nbsp;
+  <div class="dropdown">
+    <button class="dropbtn">Semester</button>
+    <div class="dropdown-content">
+      <a href="#">Fall</a>
+      <a href="#">Winter</a>
+      <a href="#">Spring</a>
+      <a href="#">Summer</a>
+    </div>
+  </div>
+  &nbsp; &nbsp;
+  <div class="dropdown">
+    <button class="dropbtn">Group Size</button>
+    <div class="dropdown-content">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4+</a>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+    <div class="split left">
+      <img src="1large.jpg" width = 350px height = 230px>
+      <h2>South Campus Commons 7</h2>
+      <div class="Roominfo">
+        <p>$970 / month</p>
+        <p>Room 7101</p>
+        <p>1 bedroom, 1 bath</p>
+        <p>Fall 2019</p>
+        <p>Kitchen</p>
+        <p>Washing Machine</p>
+      </div>
+      <p>4 bed 4 bath, 3 roomates, clean, no loud music, occasional guests, no smoking</p>
+    </div>
+    <div class="split right">
+      <div class="lenderphoto">
+        <img src="lender.jpeg" width = 150px height = 150px>
+      </div>
+      <p>Hi! I'm Rachel Mayer, a Sophmore studying Computer Science. I am studying abroad this Fall 2019 and am looking to sublease my apartment. Females only. Message me for more details!</p>
+    </div>
+
+    <div class="happysad">
+      <input type="image" src="check.png" height=70px width=70px/>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <input type="image" src="xmark.png" height=70px width=70px/>
+    </div>
+</div>
+
+<script>function setParam(name, value) {
+    var l = window.location;
+    console.log(l);
+
+    /* build params */
+    var params = {};
+    var x = /(?:\??)([^=&?]+)=?([^&?]*)/g;
+    var s = l.search;
+    for(var r = x.exec(s); r; r = x.exec(s))
+    {
+        r[1] = decodeURIComponent(r[1]);
+        if (!r[2]) {
+          r[2] = '%%';
+        }
+        params[r[1]] = r[2];
+    }
+
+    /* set param */
+    params[name] += encodeURIComponent(value);
+
+    /* build search */
+    var search = [];
+    for(var i in params)
+    {
+        var p = encodeURIComponent(i);
+        var v = params[i];
+        if (v != '%%') {
+          p += '=' + v;
+        }
+        search.push(p);
+    }
+    search = search.join('&');
+
+    /* execute search */
+    l.search = search;
+}
+</script>
+</html>

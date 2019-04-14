@@ -1,0 +1,94 @@
+<h1>Post a shell!</h1>
+
+<form method="POST" action="/submit">
+
+<div class = "input">
+  <label>Building</label>
+  <select name="building">
+    <option value=1>Landmark</option>
+    <option value=2>Commons 1</option>
+    <option value=3>Commons 2</option>
+    <option value=4>Commons 3</option>
+    <option value=5>Commons 4</option>
+    <option value=6>Commons 5</option>
+    <option value=7>Commons 6</option>
+    <option value=8>Commons 7</option>
+    <option value=9>Terrapin Row</option>
+    <option value=10>Varsity</option>
+    <option value=11>View</option>
+    <option value=12>Off Campus Housing</option>
+  </select>
+</div>
+
+<div class = "input">
+  <label>Room Number</label>
+  <input type="text" name="number">
+</div>
+
+<div class = "input">
+  <label>Vacancy Spots</label>
+  <select name="vacancy">
+    <option value=1>1</option>
+    <option value=2>2</option>
+    <option value=3>3</option>
+    <option value=4>4+</option>
+  </select>
+</div>
+
+<div class = "input">
+  <label>Rent per Month</label>
+  <input type="text" name="rent">
+</div>
+
+<div class = "input">
+  <label>Semesters for lease</label>
+  <input type="checkbox" name="f" checked>
+  <label for="f">Fall</label>
+  <input type="checkbox" name="w" checked>
+  <label for="w">Winter</label>
+  <input type="checkbox" name="p" checked>
+  <label for="p">Spring</label>
+  <input type="checkbox" name="s" checked>
+  <label for="s">Summer</label>
+</div>
+
+<div class = "input">
+  <label>Room Features (seperate by comma's)</label>
+  <input type="checkbox" name="kitchen">
+  <label for="kitchen">Kitchen</label>
+  <input type="checkbox" name="washing">
+  <label for="washing">Washing Machine</label>
+  <input type="checkbox" name="living">
+  <label for="living">Living Room</label>
+</div>
+
+<div class = "input">
+  <label>Looking for</label>
+  <input type="radio" name="gender" value = "f">Woman
+  <input type="radio" name="gender" value = "m">Man
+  <input type="radio" name="gender" value = "b">Both
+</div>
+
+<div class = "input">
+  <label>Additional Room Info</label>
+  <input type="text" name="roomBio">
+</div>
+
+<div class = "input">
+  <label>Room Picture (URL)</label>
+  <input type="text" name="roomPic">
+</div>
+
+<div class = "input">
+  <label>Profile Picture (URL)</label>
+  <input type="text" name="pic">
+</div>
+
+<div class = "input">
+  <label>Bio</label>
+  <textarea name="bio" maxlength="200" rows: "10" cols="4"></textarea>
+</div>
+
+<button type="submit"> Submit! </button>
+
+</form>
